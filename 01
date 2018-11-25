@@ -1,11 +1,17 @@
+#問題の次元数を取得
 Q = input()
+
+#NとMに列数と行数を格納
 NM = Q.split()
 N = NM[0]
 M = NM[1]
+
+#必要な変数を作成
 SL = list()
 num = int()
 ans = int()
 
+#各行の合計値をリストSLに追記
 for i1 in range(int(M)):
     tmp1 = input()
     tmp2 = tmp1.split()
@@ -16,6 +22,7 @@ for i1 in range(int(M)):
     SL.append(num)
     num = int()
     
+#SLからプラスの値のみを合計してansに格納
 for i2 in range(len(SL)):
     if SL[i2] >= 0:
         ans += SL[i2]
