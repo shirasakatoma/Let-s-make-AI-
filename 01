@@ -1,0 +1,25 @@
+Q = input()
+NM = Q.split()
+N = NM[0]
+M = NM[1]
+SL = list()
+num = int()
+ans = int()
+
+for i1 in range(int(M)):
+    tmp1 = input()
+    tmp2 = tmp1.split()
+    
+    for i2 in range(int(N)):
+        num += int(tmp2[i2])
+    
+    SL.append(num)
+    num = int()
+    
+for i2 in range(len(SL)):
+    if SL[i2] >= 0:
+        ans += SL[i2]
+    else:
+        ans += 0
+
+print(ans)
